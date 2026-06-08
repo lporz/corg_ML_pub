@@ -1,0 +1,6 @@
+- model.hidden_layers=[128,64,32]
+- model.dropout_rate=0.3
+- training.batch_size=32
+- training.learning_rate=0.001
+- spatial_weighting.method=density
+- spatial_weighting.radius=0.15

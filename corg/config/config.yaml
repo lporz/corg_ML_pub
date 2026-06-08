@@ -1,0 +1,52 @@
+defaults:
+    #- override hydra/launcher: slurmconf.yaml
+    - _self_
+
+# Random seed for reproducibility
+seed: 42
+
+# Data Parameters
+data:
+  train_file: '../data/Corg_BS.csv'
+  test_file: '../data/Corg_BS_test_points_FPS_constr.dat'
+  prediction_file: '../data/BS_out_pnts_500m.csv'
+  n_test_points: 100
+
+# Spatial Weighting Parameters (for addressing data imbalance)
+spatial_weighting:
+  use_spatial_weighting: true
+  method: 'density'  # Method for calculating spatial weights: 'density', 'distance', or 'kde'
+  radius: 0.25  # Radius (in degrees) for density calculation
+  min_weight: 0.1  # Minimum weight to prevent over-weighting sparse regions
+  max_weight: 3.0  # Maximum weight to prevent under-weighting dense regions
+  power: 1.0  # Power to apply to weights (1.0 = linear, 0.5 = square root, 2.0 = squared)
+
+# Model Architecture Parameters
+model:
+  hidden_layers: [128,64,32]  # Number of neurons in each hidden layer
+  dropout_rate: 0.1  # Probability of dropping neurons during training (0.0 to 1.0)
+
+# Training Parameters
+training:
+  batch_size: 32  # Number of samples per training batch
+  learning_rate: 0.002  # Initial learning rate
+  max_epochs: 300  # Maximum number of training epochs
+  early_stopping_patience: 20  # Number of epochs to wait before early stopping
+  min_learning_rate: 1e-6  # Minimum learning rate for the scheduler
+  lr_scheduler_factor: 0.5  # Factor to reduce learning rate by when plateauing
+  lr_scheduler_patience: 10  # Number of epochs to wait before reducing learning rate
+
+# Device Configuration
+device:
+  use_cuda: true  # Set to True to use GPU if available, False to use CPU
+
+# Output Configuration
+output:
+  save_model: true
+  model_save_path: 'models/corg_model.pth'
+  save_plots: true
+  plots_save_path: 'plots/corg_model_performance.png'
+  scaler_path: 'misc/corg_scaler.pkl'
+  output_file: 'outputs/corg_BS_out_pnts_500m_predictions_optparam.csv'
+  output_plot: 'plots/corg_prediction_optparam.png'
+  confidence_plot: 'plots/corg_confidence_map_optparam.png'

@@ -1,0 +1,40 @@
+[2026-06-05 17:18:49,508][__main__][INFO] - Using device: cpu
+[2026-06-05 17:18:49,514][__main__][INFO] - Missing values in training data:
+[2026-06-05 17:18:49,515][__main__][INFO] - lon                   0
+lat                   0
+Corg (%)              0
+mud (%)            1770
+dist_coast (km)       0
+depth (m)             0
+[2026-06-05 17:18:49,519][__main__][INFO] - Calculating spatial weights using method: density
+[2026-06-05 17:18:49,566][__main__][INFO] - Weight statistics:
+[2026-06-05 17:18:49,567][__main__][INFO] -   Min weight: 0.100
+[2026-06-05 17:18:49,568][__main__][INFO] -   Max weight: 3.000
+[2026-06-05 17:18:49,569][__main__][INFO] -   Mean weight: 0.389
+[2026-06-05 17:18:49,570][__main__][INFO] -   Std weight: 0.568
+[2026-06-05 17:18:49,578][__main__][INFO] - Using spatial weighting with 2094 samples
+[2026-06-05 17:18:49,579][__main__][INFO] - Training Neural Network Model Carbon Predictor...
+[2026-06-05 17:18:50,120][__main__][INFO] - Epoch 10/300, Train Loss: 5.2608
+[2026-06-05 17:18:50,613][__main__][INFO] - Epoch 20/300, Train Loss: 4.6185
+[2026-06-05 17:18:51,155][__main__][INFO] - Epoch 30/300, Train Loss: 4.4088
+[2026-06-05 17:18:51,717][__main__][INFO] - Epoch 40/300, Train Loss: 3.8399
+[2026-06-05 17:18:52,250][__main__][INFO] - Epoch 50/300, Train Loss: 3.6666
+[2026-06-05 17:18:52,787][__main__][INFO] - Epoch 60/300, Train Loss: 3.3694
+[2026-06-05 17:18:53,283][__main__][INFO] - Epoch 70/300, Train Loss: 3.6143
+[2026-06-05 17:18:53,825][__main__][INFO] - Epoch 80/300, Train Loss: 3.3755
+[2026-06-05 17:18:54,402][__main__][INFO] - Epoch 90/300, Train Loss: 3.2922
+[2026-06-05 17:18:54,948][__main__][INFO] - Epoch 100/300, Train Loss: 3.0983
+[2026-06-05 17:18:55,440][__main__][INFO] - Epoch 110/300, Train Loss: 3.2189
+[2026-06-05 17:18:55,983][__main__][INFO] - Epoch 120/300, Train Loss: 3.1106
+[2026-06-05 17:18:56,279][__main__][INFO] - Early stopping triggered at epoch 126
+[2026-06-05 17:18:56,281][__main__][INFO] - Model Evaluation:
+[2026-06-05 17:18:56,281][__main__][INFO] - MSE: 3.3478
+[2026-06-05 17:18:56,282][__main__][INFO] - RMSE: 1.8297
+[2026-06-05 17:18:56,282][__main__][INFO] - MAE: 1.3169
+[2026-06-05 17:18:56,283][__main__][INFO] - R-squared: 0.6308
+[2026-06-05 17:18:56,286][__main__][INFO] - Model saved to models/corg_model.pth
+[2026-06-05 17:18:56,287][__main__][INFO] - Final Model Metrics:
+[2026-06-05 17:18:56,287][__main__][INFO] - MSE: 3.3478
+[2026-06-05 17:18:56,288][__main__][INFO] - RMSE: 1.8297
+[2026-06-05 17:18:56,288][__main__][INFO] - MAE: 1.3169
+[2026-06-05 17:18:56,288][__main__][INFO] - R-squared: 0.6308

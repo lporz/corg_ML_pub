@@ -1,0 +1,38 @@
+seed: 42
+data:
+  train_file: ../data/Corg_BS.csv
+  test_file: ../data/Corg_BS_test_points_FPS_constr.dat
+  prediction_file: ../data/BS_out_pnts_500m.csv
+  n_test_points: 100
+spatial_weighting:
+  use_spatial_weighting: true
+  method: kde
+  radius: 0.2
+  min_weight: 0.1
+  max_weight: 3.0
+  power: 1.0
+model:
+  hidden_layers:
+  - 64
+  - 32
+  - 16
+  dropout_rate: 0.2
+training:
+  batch_size: 64
+  learning_rate: 0.001
+  max_epochs: 300
+  early_stopping_patience: 20
+  min_learning_rate: 1.0e-06
+  lr_scheduler_factor: 0.5
+  lr_scheduler_patience: 10
+device:
+  use_cuda: true
+output:
+  save_model: true
+  model_save_path: models/corg_model.pth
+  save_plots: true
+  plots_save_path: plots/corg_model_performance.png
+  scaler_path: misc/corg_scaler.pkl
+  output_file: outputs/corg_BS_out_pnts_500m_predictions_optparam.csv
+  output_plot: plots/corg_prediction_optparam.png
+  confidence_plot: plots/corg_confidence_map_optparam.png

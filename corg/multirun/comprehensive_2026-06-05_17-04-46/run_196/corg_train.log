@@ -1,0 +1,43 @@
+[2026-06-05 17:34:05,285][__main__][INFO] - Using device: cpu
+[2026-06-05 17:34:05,290][__main__][INFO] - Missing values in training data:
+[2026-06-05 17:34:05,291][__main__][INFO] - lon                   0
+lat                   0
+Corg (%)              0
+mud (%)            1770
+dist_coast (km)       0
+depth (m)             0
+[2026-06-05 17:34:05,294][__main__][INFO] - Calculating spatial weights using method: kde
+[2026-06-05 17:34:05,388][__main__][INFO] - Weight statistics:
+[2026-06-05 17:34:05,389][__main__][INFO] -   Min weight: 0.100
+[2026-06-05 17:34:05,390][__main__][INFO] -   Max weight: 3.000
+[2026-06-05 17:34:05,391][__main__][INFO] -   Mean weight: 0.149
+[2026-06-05 17:34:05,392][__main__][INFO] -   Std weight: 0.174
+[2026-06-05 17:34:05,401][__main__][INFO] - Using spatial weighting with 2094 samples
+[2026-06-05 17:34:05,403][__main__][INFO] - Training Neural Network Model Carbon Predictor...
+[2026-06-05 17:34:06,344][__main__][INFO] - Epoch 10/300, Train Loss: 4.3467
+[2026-06-05 17:34:07,372][__main__][INFO] - Epoch 20/300, Train Loss: 3.5033
+[2026-06-05 17:34:08,401][__main__][INFO] - Epoch 30/300, Train Loss: 2.8868
+[2026-06-05 17:34:09,337][__main__][INFO] - Epoch 40/300, Train Loss: 3.0350
+[2026-06-05 17:34:10,280][__main__][INFO] - Epoch 50/300, Train Loss: 2.9242
+[2026-06-05 17:34:11,212][__main__][INFO] - Epoch 60/300, Train Loss: 2.5383
+[2026-06-05 17:34:12,160][__main__][INFO] - Epoch 70/300, Train Loss: 2.2867
+[2026-06-05 17:34:13,179][__main__][INFO] - Epoch 80/300, Train Loss: 2.2637
+[2026-06-05 17:34:14,108][__main__][INFO] - Epoch 90/300, Train Loss: 2.2980
+[2026-06-05 17:34:15,035][__main__][INFO] - Epoch 100/300, Train Loss: 2.3356
+[2026-06-05 17:34:15,971][__main__][INFO] - Epoch 110/300, Train Loss: 2.1928
+[2026-06-05 17:34:16,964][__main__][INFO] - Epoch 120/300, Train Loss: 2.3999
+[2026-06-05 17:34:17,908][__main__][INFO] - Epoch 130/300, Train Loss: 2.0967
+[2026-06-05 17:34:18,908][__main__][INFO] - Epoch 140/300, Train Loss: 2.1124
+[2026-06-05 17:34:19,839][__main__][INFO] - Epoch 150/300, Train Loss: 2.2347
+[2026-06-05 17:34:20,114][__main__][INFO] - Early stopping triggered at epoch 153
+[2026-06-05 17:34:20,117][__main__][INFO] - Model Evaluation:
+[2026-06-05 17:34:20,117][__main__][INFO] - MSE: 3.1929
+[2026-06-05 17:34:20,118][__main__][INFO] - RMSE: 1.7869
+[2026-06-05 17:34:20,118][__main__][INFO] - MAE: 1.2671
+[2026-06-05 17:34:20,119][__main__][INFO] - R-squared: 0.6478
+[2026-06-05 17:34:20,125][__main__][INFO] - Model saved to models/corg_model.pth
+[2026-06-05 17:34:20,126][__main__][INFO] - Final Model Metrics:
+[2026-06-05 17:34:20,127][__main__][INFO] - MSE: 3.1929
+[2026-06-05 17:34:20,128][__main__][INFO] - RMSE: 1.7869
+[2026-06-05 17:34:20,129][__main__][INFO] - MAE: 1.2671
+[2026-06-05 17:34:20,130][__main__][INFO] - R-squared: 0.6478

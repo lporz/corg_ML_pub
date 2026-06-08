@@ -1,0 +1,6 @@
+- model.hidden_layers=[64,32,16]
+- model.dropout_rate=0.3
+- training.batch_size=64
+- training.learning_rate=0.002
+- spatial_weighting.method=kde
+- spatial_weighting.radius=0.2

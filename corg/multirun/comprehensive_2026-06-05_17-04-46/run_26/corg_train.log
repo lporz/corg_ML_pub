@@ -1,0 +1,32 @@
+[2026-06-05 17:08:38,019][__main__][INFO] - Using device: cpu
+[2026-06-05 17:08:38,025][__main__][INFO] - Missing values in training data:
+[2026-06-05 17:08:38,027][__main__][INFO] - lon                   0
+lat                   0
+Corg (%)              0
+mud (%)            1770
+dist_coast (km)       0
+depth (m)             0
+[2026-06-05 17:08:38,030][__main__][INFO] - Calculating spatial weights using method: density
+[2026-06-05 17:08:38,078][__main__][INFO] - Weight statistics:
+[2026-06-05 17:08:38,079][__main__][INFO] -   Min weight: 0.100
+[2026-06-05 17:08:38,080][__main__][INFO] -   Max weight: 3.000
+[2026-06-05 17:08:38,081][__main__][INFO] -   Mean weight: 0.389
+[2026-06-05 17:08:38,082][__main__][INFO] -   Std weight: 0.568
+[2026-06-05 17:08:38,091][__main__][INFO] - Using spatial weighting with 2094 samples
+[2026-06-05 17:08:38,093][__main__][INFO] - Training Neural Network Model Carbon Predictor...
+[2026-06-05 17:08:38,587][__main__][INFO] - Epoch 10/300, Train Loss: 4.6456
+[2026-06-05 17:08:39,205][__main__][INFO] - Epoch 20/300, Train Loss: 3.7319
+[2026-06-05 17:08:39,697][__main__][INFO] - Epoch 30/300, Train Loss: 3.6156
+[2026-06-05 17:08:40,230][__main__][INFO] - Epoch 40/300, Train Loss: 3.2304
+[2026-06-05 17:08:40,676][__main__][INFO] - Early stopping triggered at epoch 49
+[2026-06-05 17:08:40,678][__main__][INFO] - Model Evaluation:
+[2026-06-05 17:08:40,678][__main__][INFO] - MSE: 3.6866
+[2026-06-05 17:08:40,679][__main__][INFO] - RMSE: 1.9200
+[2026-06-05 17:08:40,679][__main__][INFO] - MAE: 1.4189
+[2026-06-05 17:08:40,680][__main__][INFO] - R-squared: 0.5934
+[2026-06-05 17:08:40,683][__main__][INFO] - Model saved to models/corg_model.pth
+[2026-06-05 17:08:40,684][__main__][INFO] - Final Model Metrics:
+[2026-06-05 17:08:40,685][__main__][INFO] - MSE: 3.6866
+[2026-06-05 17:08:40,686][__main__][INFO] - RMSE: 1.9200
+[2026-06-05 17:08:40,687][__main__][INFO] - MAE: 1.4189
+[2026-06-05 17:08:40,688][__main__][INFO] - R-squared: 0.5934
